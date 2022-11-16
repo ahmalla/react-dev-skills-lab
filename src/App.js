@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './App.css'
+import NewSkillForm from './NewSkillForm';
+import SkillList from './SkillListItem';
+
+const skills = [
+  { name: "HTML", level: 5 },
+  { name: "CSS", level: 3 },
+  { name: "JavaScript", level: 4 },
+  { name: "Python", level: 2 },
+];
+
+
+  
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 style={{fontSize: "48px", color: "teal"}}>React Dev Skills</h1>
+      {skills.map(function (skill) {
+        return <SkillList key={skill.name} name={skill.name} level={skill.level} />
+
+})}
+      <NewSkillForm />
     </div>
-  );
+  )
 }
 
-export default App;
+// exporting the function reference
+// used to be module.exports
+export default App
