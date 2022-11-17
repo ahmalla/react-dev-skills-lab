@@ -1,8 +1,8 @@
 function SkillList ({name, level}) {
     return (
-    <div className="SkillListItem">
+    <div>
         <ul>
-            <li>{name} Level {level}</li>
+            <li className="SkillListItem">{name}<p className="level">Level {level}</p> </li>
         </ul>
     </div>
 )}

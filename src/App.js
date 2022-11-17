@@ -43,7 +43,7 @@ function App() {
             <option value={4}>4</option>
             <option value={5}>5</option>
           </select>
-          <button type='submit'>Add SKill</button>
+          <button type="submit">Add SKill</button>
         </form>
     </div>
     </div>
